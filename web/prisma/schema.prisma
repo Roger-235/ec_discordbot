@@ -15,7 +15,6 @@ model users {
   isPaid    Boolean @default(false)
   discordId String?
   point     Int     @default(0)
-  identity  String  @default("member")
   core      cores?
 }
 

@@ -7,10 +7,11 @@ const stats = [
 ]
 
 const actions = [
-  { href: "/members", ref: "SW1", label: "LIST-MEMBERS", desc: "會員列表" },
-  { href: "/members/new", ref: "SW2", label: "ADD-MEMBER", desc: "新增會員" },
-  { href: "/admin/cores", ref: "SW3", label: "LIST-CADRES", desc: "幹部管理" },
-  { href: "/admin/posts", ref: "SW4", label: "LIST-ACTIVITIES", desc: "活動管理" },
+  { href: "/admin/members", ref: "SW1", label: "LIST-MEMBERS", desc: "會員列表" },
+  { href: "/admin/members/new", ref: "SW2", label: "ADD-MEMBER", desc: "新增會員" },
+  { href: "/admin/members/import", ref: "SW3", label: "IMPORT-MEMBERS", desc: "批量匯入會員" },
+  { href: "/admin/cores", ref: "SW4", label: "LIST-CADRES", desc: "幹部管理" },
+  { href: "/admin/posts", ref: "SW5", label: "LIST-ACTIVITIES", desc: "活動管理" },
 ]
 
 export default function AdminPage() {

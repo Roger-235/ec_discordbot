@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react"
 import { useRouter } from "next/navigation"
+import Link from "next/link"
 
 export default function NewMemberPage() {
   const router = useRouter()
@@ -9,7 +10,6 @@ export default function NewMemberPage() {
     year: "",
     name: "",
     class: "",
-    identity: "member",
   })
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
@@ -48,6 +48,9 @@ export default function NewMemberPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-8 space-y-3">
       <div className="pcb-card px-8 py-5">
+        <Link href="/admin" className="silk hover:text-[#c8d8c8] transition-colors inline-block mb-4">
+          ← 管理後台
+        </Link>
         <span className="silk block mb-2">WRITE · NEW-NODE · J1</span>
         <h1 className="text-3xl font-black text-[#e8f0e8]">新增會員</h1>
       </div>
@@ -73,20 +76,6 @@ export default function NewMemberPage() {
               </div>
             </div>
           ))}
-
-          <div>
-            <span className="silk block mb-2 text-[#4a7a4a]"># IDENTITY</span>
-            <select
-              name="identity"
-              value={form.identity}
-              onChange={handleChange}
-              className="w-full border border-[#4a8a4e] bg-[#1a4a1e] text-[#c8d8c8] px-4 py-2.5 text-xs focus:outline-none focus:border-[#b87333] transition-colors"
-            >
-              <option value="member">會員</option>
-              <option value="cadre">幹部</option>
-              <option value="admin">管理員</option>
-            </select>
-          </div>
 
           {error && <p className="silk text-red-400 text-xs">{error}</p>}
 
